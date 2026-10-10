@@ -29,8 +29,8 @@ const rows = computed(() =>
   [
     // 视角切换：第一条说「她」，后两条说「你」。不用小标题也能读分组
     { label: '心愿', value: props.wants },
-    { label: '抗拒', value: props.resist },
-    { label: '软肋', value: props.weakness },
+    { label: '不能碰', value: props.resist },
+    { label: '一句话', value: props.weakness },
   ].filter(row => Boolean(row.value)),
 );
 </script>
