@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "default": {},
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "日期": {
+          "default": "2026年10月9日",
+          "type": "string"
+        },
+        "时段": {
+          "default": "傍晚",
+          "type": "string",
+          "enum": [
+            "早上",
+            "中午",
+            "下午",
+            "傍晚",
+            "晚上",
+            "深夜"
+          ]
+        },
+        "当前地点": {
+          "default": "未明确",
+          "type": "string"
+        },
+        "当前目标": {
+          "default": "",
+          "type": "string"
+        },
+        "在场": {
+          "default": [],
+          "type": "array",
+          "items": {}
+        }
+      }
+    },
+    "主角": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "现金": {
+          "default": 2000,
+          "type": "number"
+        },
+        "器材": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "器材名"
+          },
+          "additionalProperties": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "频道": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "粉丝量": {
+              "default": 0,
+              "type": "number"
+            },
+            "基础订阅": {
+              "default": 0,
+              "type": "number"
+            },
+            "高级订阅": {
+              "default": 0,
+              "type": "number"
+            },
+            "点单订阅": {
+              "default": 0,
+              "type": "number"
+            },
+            "月入": {
+              "default": 0,
+              "type": "number"
+            },
+            "待办": {
+              "default": [],
+              "type": "array",
+              "items": {}
+            }
+          }
+        }
+      }
+    },
+    "目标": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "目标花名"
+      },
+      "additionalProperties": {
+        "default": {},
+        "type": "object",
+        "properties": {
+          "档案": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "年龄": {
+                "default": 0,
+                "type": "number"
+              },
+              "身份": {
+                "default": "未明确",
+                "type": "string"
+              },
+              "背景": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          },
+          "欲望": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "心愿": {
+                "default": "未明确",
+                "type": "string"
+              }
+            }
+          },
+          "开发": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "堕落值": {
+                "default": 0,
+                "type": "number"
+              },
+              "抗拒": {
+                "default": "未明确",
+                "type": "string"
+              },
+              "软肋": {
+                "default": "未明确",
+                "type": "string"
+              },
+              "翻车点": {
+                "default": "未明确",
+                "type": "string"
+              }
+            }
+          },
+          "供给": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "钱": {
+                "default": 0,
+                "type": "number"
+              },
+              "物": {
+                "default": 0,
+                "type": "number"
+              },
+              "情": {
+                "default": 0,
+                "type": "number"
+              },
+              "曝光": {
+                "default": 0,
+                "type": "number"
+              }
+            }
+          },
+          "产出": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "片数": {
+                "default": 0,
+                "type": "number"
+              },
+              "主题": {
+                "default": [],
+                "type": "array",
+                "items": {}
+              }
+            }
+          },
+          "来路": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "介绍人": {
+                "default": "未明确",
+                "type": "string"
+              },
+              "身边的人": {
+                "default": [],
+                "type": "array",
+                "items": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "片子": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "片子编号或片名"
+      },
+      "additionalProperties": {
+        "default": {},
+        "type": "object",
+        "properties": {
+          "买家": {
+            "default": "",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "记录": {
+      "default": [],
+      "type": "array",
+      "items": {}
+    }
+  }
+}

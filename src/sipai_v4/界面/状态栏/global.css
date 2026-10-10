@@ -1,0 +1,113 @@
+/* ══════════════════════════════════════════════════════════
+   私拍猎艳 v4 · 状态栏全局样式与主题令牌
+
+   约束：
+   1. 色彩变量用功能语义命名（--c-surface / --c-text-muted），禁止视觉描述命名
+   2. 主题只覆盖令牌，不改结构
+   3. 不设 max-width，宽度自适应填满聊天气泡区
+   ══════════════════════════════════════════════════════════ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* ── 主题 F：暗夜私拍（默认）──
+   近黑底 + 胶片暖调：主色暖琥珀，点缀柔粉，REC 红点只在有目标在场时亮。
+   取景器语言：方角、细框、刻度，像相机的取景框。 */
+.sm-root {
+  /* 结构令牌 */
+  --r-card: 2px;
+  --r-inner: 2px;
+  --bar-h: 8px;
+  --tick-w: 1px;
+  --tick-opacity: 0.85;
+
+  /* 色彩令牌 */
+  --c-surface: #100e13;
+  --c-surface-alt: #16131a;
+  --c-track: #201b26;
+  --c-border: #2c2433;
+  --c-border-soft: #1d1823;
+  --c-text: #d8d2c8;
+  --c-text-muted: #a89e90;
+  --c-text-dim: #655c55;
+  --c-accent: #e8a13c;
+  --c-money: #7cb878;
+  --c-channel: #c9925a;
+  --c-danger: #ff5c5c;
+  --c-rec: #ff4d4d;
+  --c-lead: #e88aa0;
+  --c-tick: #100e13;
+
+  /* 档位五色：生人 → 上手 → 熟了 → 放开 → 调教成
+     色温从冷灰一路烧到红粉，颜色本身就是「开发进度」 */
+  --c-tier-0: #5f5a66;
+  --c-tier-1: #b08d57;
+  --c-tier-2: #d99a4e;
+  --c-tier-3: #e0704f;
+  --c-tier-4: #e0486a;
+
+  /* 四条路 */
+  --c-path-money: #7cb878;
+  --c-path-thing: #d9b25e;
+  --c-path-feel: #e88aa0;
+  --c-path-fame: #8aa8d9;
+
+  --font-ui: 'Sarasa Gothic SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-num: 'SF Mono', Menlo, Consolas, 'Sarasa Mono SC', monospace;
+
+  width: 100%;
+  margin: 8px 0;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--c-text);
+}
+
+/* 暗夜私拍：整卡一层微弱的暗角，像镜头边缘 */
+.sm-root .sm-card {
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.55);
+}
+
+/* ── 主题 C：暗房红 ── */
+.sm-root[data-theme='C'] {
+  --r-card: 0;
+  --r-inner: 0;
+  --bar-h: 10px;
+  --tick-w: 2px;
+  --c-surface: #0a0a0a;
+  --c-surface-alt: #000000;
+  --c-track: #1d1d1d;
+  --c-border: #f2f2f2;
+  --c-border-soft: #1a1a1a;
+  --c-text: #f2f2f2;
+  --c-text-muted: #a8a8a8;
+  --c-text-dim: #7a7a7a;
+  --c-accent: #e01b1b;
+  --c-money: #ffffff;
+  --c-channel: #4a9ec4;
+  --c-danger: #ff5a5a;
+  --c-rec: #e01b1b;
+  --c-lead: #d4c020;
+  --c-tick: #0a0a0a;
+  --c-tier-0: #4a4a4a;
+  --c-tier-1: #4a9ec4;
+  --c-tier-2: #d4c020;
+  --c-tier-3: #e07a20;
+  --c-tier-4: #e01b1b;
+  --c-path-money: #5ad19a;
+  --c-path-thing: #d4c020;
+  --c-path-feel: #ff8fa8;
+  --c-path-fame: #4a9ec4;
+  --font-ui: 'Helvetica Neue', Arial, 'PingFang SC', 'Sarasa Gothic SC', sans-serif;
+}
+
+.sm-root[data-theme='C'] .sm-card {
+  box-shadow: none;
+}
